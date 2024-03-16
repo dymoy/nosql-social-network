@@ -1,7 +1,7 @@
 /**
  * @file thoughtController.js
  * Implements the logic for thought API routes and functions 
- * Supported methods: 
+ * Supported API: 
  *  - getThoughts: returns all existing Thought documents in the collection 
  *  - getThoughtById: returns a single Thought document by id 
  *  - createThought: creates an instance of the Thought model using the data in req.body 

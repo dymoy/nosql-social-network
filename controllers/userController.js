@@ -1,7 +1,7 @@
 /**
  * @file userController.js
  * Implements the logic for user API routes and functions 
- * Supported methods: 
+ * Supported API: 
  *  - getUsers: returns all the existing User documents in the collection 
  *  - getUserById: returns a single User document by id 
  *  - createUser: creates an instance of the User model using the data in req.body 
