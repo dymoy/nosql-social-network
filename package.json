@@ -10,6 +10,7 @@
     "seed": "node utils/seed"
   },
   "dependencies": {
+    "dayjs": "^1.11.10",
     "express": "^4.17.1",
     "jest": "^29.7.0",
     "mongoose": "^7.0.2"
