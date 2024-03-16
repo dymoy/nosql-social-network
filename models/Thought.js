@@ -15,7 +15,7 @@ const thoughtSchema = new Schema(
             type: Date,
             default: Date.now,
             // Use a getter method to format the timestamp on query
-            get: (date) = format_date(date)
+            get: (date) => format_date(date)
         },
         // The user that created this thought
         username: {
