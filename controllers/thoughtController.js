@@ -113,7 +113,51 @@ module.exports = {
         }
     },
 
-    /* TODO: Create a reaction stored in a single thought's reactions array field */
+    /* Create a reaction stored in a single thought's reactions array field */ 
+    async addReaction(req, res) {
+        try { 
+            const thought = await Thought.findOneAndUpdate(
+                { _id: req.params.thoughtId },
+                { $push: { reactions: req.body } },
+                { new: true }
+            );
+            
+            if (!thought) {
+                res.status(404).json({message: 'No thought found with the requested ID.'});
+            }
+
+            res.status(200).json(thought);
+        } catch (err) { 
+            res.status(500).json({
+                error: err,
+                message: 'Error adding Reaction.'
+            });
+        }
+    },
     
-    /* TODO: DELETE to pull and remove a reaction by the reaction's reactionId value */
+    /* Pull and remove a reaction by the reaction's reactionId value */
+    async deleteReaction(req, res) {
+        try {
+            const thought = await Thought.findOneAndUpdate(
+                { _id: req.params.thoughtId },
+                { $pull: { 
+                    reactions: {
+                        _id: req.params.reactionId
+                    }
+                }},
+                { new: true}
+            );
+
+            if (!thought) {
+                res.status(404).json({message: 'No thought found with the requested ID.'});
+            }
+
+            res.status(200).json(thought);
+        } catch (err) {
+            res.status(500).json({
+                error: err,
+                message: 'Error deleting Reaction.'
+            });
+        }
+    }
 }
