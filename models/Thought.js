@@ -1,8 +1,11 @@
+/**
+ * @file Thought.js
+ * Defines the schema for the Thought document and iniitalizes the Thought model
+ */
 const { Schema, model } = require('mongoose');
 const Reaction = require('./Reaction.js');
 const format_date = require("../utils/helpers/format_date.js");
 
-/* Define the schema to create Thought model */
 const thoughtSchema = new Schema(
     {
         thoughtText: {
