@@ -1,3 +1,7 @@
+/**
+ * @file User.js
+ * Defines the schema for the User document and initializes the User model
+ */
 const { Schema, model } = require('mongoose');
 
 /* Define the schema to create User model */
@@ -13,21 +17,17 @@ const userSchema = new Schema(
             type: String,
             unique: true,
             required: 'Email address is required!',
+            // Validates the email address using regex pattern
             match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/]
         }, 
-        thoughts: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: "Thought"
-
-            }
-        ],
-        friends: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'User'
-            }
-        ]
+        thoughts: [{
+            type: Schema.Types.ObjectId,
+            ref: "Thought"
+        }],
+        friends: [{
+            type: Schema.Types.ObjectId,
+            ref: 'User'
+        }]
     },
     {
         toJSON: {

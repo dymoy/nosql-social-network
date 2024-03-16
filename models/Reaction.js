@@ -1,3 +1,7 @@
+/**
+ * @file Reaction.js
+ * Defines the schema for the Reaction subdocument
+ */
 const { Schema } = require('mongoose');
 const format_date = require("../utils/helpers/format_date.js");
 
