@@ -68,7 +68,8 @@ module.exports = {
                 return res.status(404).json({ message: 'No user found with the requested ID.'});
             }
 
-            // BONUS TODO: delete associated thoughts 
+            // Delete all associated Thoughts to the User
+            await Thought.deleteMany({ _id: { $in: user.thoughts } });
 
             res.status(200).json(user);
         } catch (err) {
