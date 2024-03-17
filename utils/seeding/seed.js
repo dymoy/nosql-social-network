@@ -5,10 +5,12 @@ const { User, Thought } = require('../../models');
 const { createUsers } = require('./seed_users');
 const { createThoughts } = require('./seed_thoughts');
 
-console.time('Seeding');
+console.time(' Total time');
 
 /* Create the connection to MongoDB */
 connection.once('open', async () => {
+    console.log('\x1b[36m', 'Connection to MongoDB established...');
+
     // Drop the users collection if it exists
     let userArray = await connection.db.listCollections({ name: 'users' }).toArray();
 
@@ -23,12 +25,15 @@ connection.once('open', async () => {
         await connection.dropCollection('thoughts');
     }
 
+    console.log('\x1b[36m', 'Seeding data...');
+    
     // Call createUsers to add seeds to the User collection
     await createUsers();
 
     // Call createThoughts to add seeds to the Thought collection
     await createThoughts();
 
-    console.timeEnd('Seeding');
+    console.log('\x1b[32m', '✅ Done!', '\x1b[0m');
+    console.timeEnd(' Total time');
     process.exit(0);
 });
