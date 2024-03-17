@@ -40,7 +40,7 @@ This project requires the following npm package dependencies:
 
 ### User API Routes
 The animation gif below shows the responses for the `User` API routes.  
-![Animation Gif of User API Routes]()  
+![Animation Gif of User API Routes](./Assets/user_api.gif)  
 
 Supported API: 
 - `getUsers`: returns all the existing User documents in the collection 
@@ -53,7 +53,7 @@ Supported API:
 
 ### Thought API Routes
 The animation gif below shows the responses for the `Thought` API routes.  
-![Animation Gif of Thought API Routes]()  
+![Animation Gif of Thought API Routes](./Assets/thought_api.gif)  
 
 Supported API: 
 - `getThoughts`: returns all existing Thought documents in the collection 
