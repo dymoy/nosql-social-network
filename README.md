@@ -2,7 +2,7 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description 
-MongoDB is a popular choice for many social networks due to its speed with large amounts of data and flexibility with unstructured data. The goal of this project is to build an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list.
+MongoDB is a popular choice for many social networks due to its speed with large amounts of data and flexibility with unstructured data. The goal of this project is to build an API for a social network web application where users can share their thoughts, react to users' thoughts, and create a friend list.
 
 This application utilizes Express.js for routing, a MongoDB database, and the Mongoose ODM.
 
@@ -17,8 +17,8 @@ This application utilizes Express.js for routing, a MongoDB database, and the Mo
 - [Questions](#questions)
   
 ## Walkthrough Video 
-Click on the following link to view a walkthrough video that highlights the usage of the appliation:
-[NoSql Social Network API]()
+Click on the following link to view a walkthrough video that highlights the usage of the application:
+[NoSql Social Network API](https://drive.google.com/file/d/1FRWig8H5I-Dkgp3k34m1gHoTL_cg_Xg5/view?pli=1)
 
 ## Installation 
 Refer to the documentation in the [MongoDB](https://www.mongodb.com/docs/manual/installation/) website for guidance on installing and setting up MongoDB. 
